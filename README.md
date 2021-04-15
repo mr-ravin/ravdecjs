@@ -26,16 +26,15 @@ It is used where the machine generates data at a very fast rate, that it became 
 #### Example:
 
 ```
-
-import ravdec
-
+const ravdec=require("./ravdec.js");
+ravdec_obj=new ravdec();
 // for compression
-compressed_data=ravdec.net_compression("ASDFGHJK");
+var compressed_data=ravdec_obj.compression("ASDFGHJK");
 
 // note- data to be compressed should have length of multiple of 8.
 // (i.e 8 elements, or 16 elemnts or 24...so on) for decompression
 
-decompressed_data=ravdec.net_decompression("previously compressed data");
+var decompressed_data=ravdec_obj.decompression("previously compressed data");
 
 ```
 
