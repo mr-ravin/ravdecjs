@@ -49,7 +49,9 @@ npm install
 ```
 
 #### Do visit: 
-Ravdec: Python implementation of ravdec. [repository link](https://github.com/mr-ravin/ravdec)
+Ravdec: Python implementation of ravdec. [repository here](https://github.com/mr-ravin/ravdec)
+
+---
 
 ```python
 Copyright (c) 2016-2021 Ravin Kumar
