@@ -17,9 +17,9 @@ It can be  used where the machine generates data at a very fast rate, that it be
 NOTE- The data that is to be compressed should have length of multiple of 8.(i.e 8 elements, or 16
 elemnts or 24...so on)
  
-- net_compression("data to be compressed of length of multiple of 8 ") - To compress the  original data to transmit, that is
+- compression("data to be compressed of length of multiple of 8 ") - To compress the  original data to transmit, that is
    needed to be  transmitted.
-- net_decompression(" previously compressed data")  - To decompress the previously compressed data, that is received.
+- decompression(" previously compressed data")  - To decompress the previously compressed data, that is received.
 
 It is used where the machine generates data at a very fast rate, that it became difficult for other algorithms to calculate the propability of a symbol, as data keeps on getting large, and is transmitted over the network with a much faster rate.
 
