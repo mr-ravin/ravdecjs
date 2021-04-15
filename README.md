@@ -48,7 +48,8 @@ It can be  used where the machine generates data at a very fast rate, that it be
 npm install 
 ```
 
-#### Also visit Ravdec: Python implementation of ravdec. [repository link](https://github.com/mr-ravin/ravdec)
+#### Do visit: 
+Ravdec: Python implementation of ravdec. [repository link](https://github.com/mr-ravin/ravdec)
 
 ```python
 Copyright (c) 2016-2021 Ravin Kumar
