@@ -44,7 +44,7 @@ It can be  used where the machine generates data at a very fast rate, that it be
 
 #### Installation using npm:
 ```
-npm install 
+npm install ravdecjs
 ```
 
 #### Do visit: 
