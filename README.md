@@ -4,7 +4,9 @@ Ravdec is a module written in javascript, which is based on a <b>Lossless Data C
 
 ### Ravdec- LossLess Data Compression
 
-##### Algorithm Designer, and Module Developer: [Ravin Kumar](https://mr-ravin.github.io)
+- ##### Algorithm Designer, and Module Developer: [Ravin Kumar](https://mr-ravin.github.io)
+
+- ##### NPM Repository Link: https://www.npmjs.com/package/ravdecjs
 
 This compression algorithm have a fixed compression ratio of 1.1429 in all possible cases, It accepts data 
 of following format: alphabets,numbers, and symbols.
