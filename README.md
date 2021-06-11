@@ -10,7 +10,7 @@ Ravdec is a module written in javascript, which is based on a <b>Lossless Data C
 
 This compression algorithm have a fixed compression ratio of 1.1429 in all possible cases, It accepts data 
 of following format: alphabets, numbers, and symbols.
-Example: It can compress 1 GB to 896 MB.
+Example: It can compress 1 GB of data to 896 MB.
 
 ### Application of Ravdec 
 
