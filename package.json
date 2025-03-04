@@ -1,6 +1,6 @@
 {
     "name": "ravdecjs",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "RavdecJS - Lossless Data Compression",
     "main": "ravdec.js",
     "repository": {
