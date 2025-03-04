@@ -9,7 +9,7 @@ RavdecJS is a JavaScript module implementing a **lossless data compression** alg
 ---
 ## 🔧 **Development Details**
 - **👨‍💻 Developer:** [Ravin Kumar](https://mr-ravin.github.io)  
-- **💄 NPM Package:** [https://www.npmjs.com/package/ravdecjs](https://www.npmjs.com/package/ravdecjs)
+- **📦 NPM Package:** [https://www.npmjs.com/package/ravdecjs](https://www.npmjs.com/package/ravdecjs)
 - **📂 GitHub Repository:** [https://github.com/mr-ravin/ravdecjs/](https://github.com/mr-ravin/ravdecjs/)
 - **🌐 Python Implementation:** [https://github.com/mr-ravin/ravdec/](https://github.com/mr-ravin/ravdec/)
 
