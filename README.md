@@ -30,14 +30,16 @@ RavdecJS is a JavaScript module implementing a **lossless data compression** alg
 ## ⏳ **Complexity Analysis**
 
 ### **1️⃣ `enforced8CharInput = true`**
-✅ **Time Complexity: O(n)**
-✅ **Fixed Compression Ratio (1.1429)**
-✅ **Ideal for continuously growing data**
+
+- ✅ **Time Complexity: O(n)**
+- ✅ **Fixed Compression Ratio (1.1429)**
+- ✅ **Ideal for continuously growing data**
 
 ### **2️⃣ `enforced8CharInput = false`**
-📌 **Time Complexity: O(n) (with minor overhead)**
-📌 **Compression ratio varies (~1.04 - 1.1429)**
-📌 **Needs Padding Overhead**
+
+- ✅ **Time Complexity: O(n) (with minor overhead)**
+- ✅ **Compression ratio varies (~1.04 - 1.1429)**
+- ✅ **Needs Padding Overhead**
 
 ### 📌 **Comparison Table**
 | Mode | Time Complexity | Compression Ratio | Padding Overhead | Best Use Case |
@@ -55,9 +57,10 @@ RavdecJS is a JavaScript module implementing a **lossless data compression** alg
 
 ---
 ## 🚀 **Features**
-✅ **Fixed compression ratio** up to **1.1429** for `enforced8CharInput=true`.
-✅ **Supports alphabets, numbers, and symbols**.
-✅ **Optimized for real-time and high-speed data transmission**.
+
+- ✅ **Fixed compression ratio** up to **1.1429** for `enforced8CharInput=true`.
+- ✅ **Supports alphabets, numbers, and symbols**.
+- ✅ **Optimized for real-time and high-speed data transmission**.
 
 ---
 ## 🛠️ **Functions**
