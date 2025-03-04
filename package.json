@@ -1,31 +1,22 @@
 {
-  "name": "ravdecjs",
-  "email": "mr.ravin_kumar@hotmail.com",
-  "version": "1.0.1",
-  "description": "Ravdec is a module written in javascript, which is based on a Lossless Data Compression Algorithm designed by Ravin Kumar on 19 September, 2016.This compression algorithm have a fixed compression ratio of 1.1429. It accepts alpha-numeric data.",
-  "main": "ravdec.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mr-ravin/ravdecjs.git"
-  },
-  "keywords": [
-    "data",
-    "compression",
-    "lossless",
-    "data",
-    "compression",
-    "ravdec"
-  ],
-  "author": "Ravin Kumar",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mr-ravin/ravdecjs/issues"
-  },
-  "homepage": "https://github.com/mr-ravin/ravdecjs#readme",
-  "dependencies": {
-    "reactjs": "^1.0.0"
+    "name": "ravdecjs",
+    "version": "1.0.2",
+    "description": "RavdecJS - Lossless Data Compression",
+    "main": "ravdec.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mr-ravin/ravdecjs.git"
+      },
+    "scripts": {
+      "test": "node test.js"
+    },
+    "keywords": [
+        "data compression", "lossless compression", "file compression", "text compression", "efficient compression"],
+    "author": "Ravin Kumar",
+    "license": "MIT",
+    "files": [
+        "ravdec.js",
+        "test.js",
+        "README.md"
+      ]
   }
-}
