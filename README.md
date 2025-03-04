@@ -1,61 +1,137 @@
-# RavdecJs - javascript implementation of ravdec
+# 📦 **RavdecJS - Lossless Data Compression**
 
-Ravdec is a module written in javascript, which is based on a <b>Lossless Data Compression Algorithm</b> designed by [Ravin Kumar](https://mr-ravin.github.io) on 19 September, 2016.This compression algorithm have a fixed compression ratio of 1.1429 in all possible cases, It accepts data of following format: alphabets, numbers, and symbols.It can be  used where the machine generates data at a very fast rate, that it became difficult for other algorithms to calculate the propability of a symbol, as data keeps on getting large, and is transmitted over the network with a much faster rate. In this case also,  the above module, and algorithm gives the same compression ratio.
+## 🔹 **Overview**
+RavdecJS is a JavaScript module implementing a **lossless data compression** algorithm designed by [Ravin Kumar](https://mr-ravin.github.io) on **September 19, 2016**. This algorithm is designed exclusively for **textual data**, including **alphabets, numbers, and symbols**. The algorithm offers two modes:
 
-### Ravdec- LossLess Data Compression
-
-- ##### Algorithm Designer, and Module Developer: [Ravin Kumar](https://mr-ravin.github.io)
-
-- ##### NPM Repository Link: https://www.npmjs.com/package/ravdecjs
-
-This compression algorithm have a fixed compression ratio of 1.1429 in all possible cases, It accepts data 
-of following format: alphabets, numbers, and symbols.
-Example: It can compress 1 GB of data to 896 MB.
-
-### Application of Ravdec 
-
-It can be  used where the machine generates data at a very fast rate, that it became difficult for other algorithms to calculate the propability of a symbol, as data keeps on getting large, and is transmitted over the network with a much faster rate. In this case also, the above module, and algorithm gives the same compression ratio.
-
-NOTE- The data that is to be compressed should have length of multiple of 8.(i.e 8 elements, or 16
-elemnts or 24...so on)
- 
-- compression("data to be compressed of length of multiple of 8 ") - To compress the  original data to transmit, that is
-   needed to be  transmitted.
-- decompression(" previously compressed data")  - To decompress the previously compressed data, that is received.
-
-It is used where the machine generates data at a very fast rate, that it became difficult for other algorithms to calculate the propability of a symbol, as data keeps on getting large, and is transmitted over the network with a much faster rate.
-
-#### Example:
-
-```
-const ravdec=require("./ravdec.js");
-ravdec_obj=new ravdec();
-// for compression
-var compressed_data=ravdec_obj.compression("ASDFGHJK");
-
-// note- data to be compressed should have length of multiple of 8.
-// (i.e 8 elements, or 16 elemnts or 24...so on) for decompression
-
-var decompressed_data=ravdec_obj.decompression("previously compressed data");
-
-```
-
-#### Application of this module:
-
-It can be  used where the machine generates data at a very fast rate, that it became difficult for other algorithms to calculate the probability of a symbol, as data keeps on getting large, and is transmitted over the network with a much faster rate. In this case also, the above module, and algorithm gives the same compression ratio.
-
-#### Installation using npm:
-```
-npm install ravdecjs
-```
-
-#### Do visit: 
-Ravdec: Python implementation of ravdec. [repository here](https://github.com/mr-ravin/ravdec)
+- When `enforced8CharInput=true`, the length of input data must be exactly divisible by **8**, ensuring a **fixed compression ratio of 1.1429**.
+- When `enforced8CharInput=false`, the compression ratio starts at **1.0435** for a **24-character input** (minimum required length) and increases with input size, approaching **1.1429** for larger inputs.
 
 ---
+## 🔧 **Development Details**
+- **👨‍💻 Developer:** [Ravin Kumar](https://mr-ravin.github.io)  
+- **💄 NPM Package:** [https://www.npmjs.com/package/ravdecjs](https://www.npmjs.com/package/ravdecjs)
+- **📂 GitHub Repository:** [https://github.com/mr-ravin/ravdecjs/](https://github.com/mr-ravin/ravdecjs/)
+- **🌐 Python Implementation:** [https://github.com/mr-ravin/ravdec/](https://github.com/mr-ravin/ravdec/)
 
+---
+## 📊 **Compression Ratio**
+
+### ✅ **When `enforced8CharInput=false`**
+- Compression ratio starts at **1.0435** for a **24-character input** (minimum required length).
+- Gradually increases, reaching **1.14** at **912-character length**, and further approaches **1.1429** as input size increases.
+- Ideal for handling variable-length text data while still achieving efficient compression.
+
+### 🚀 **When `enforced8CharInput=true`**
+- Original data length must be exactly divisible by **8**, ensuring a **fixed compression ratio of 1.1429**.
+- Much faster, making it suitable for **high-speed data compression**.
+- Best for **real-time systems** where data is continuously growing and **frequency-based algorithms are time-consuming**.
+
+---
+## ⏳ **Complexity Analysis**
+
+### **1️⃣ `enforced8CharInput = true`**
+✅ **Time Complexity: O(n)**
+✅ **Fixed Compression Ratio (1.1429)**
+✅ **Ideal for continuously growing data**
+
+### **2️⃣ `enforced8CharInput = false`**
+📌 **Time Complexity: O(n) (with minor overhead)**
+📌 **Compression ratio varies (~1.04 - 1.1429)**
+📌 **Needs Padding Overhead**
+
+### 📌 **Comparison Table**
+| Mode | Time Complexity | Compression Ratio | Padding Overhead | Best Use Case |
+|------|---------------|-----------------|----------------|---------------|
+| `enforced8CharInput = true` | **O(n)** | **Fixed (1.1429)** | ❌ No Padding | **High-speed data streams** |
+| `enforced8CharInput = false` | **O(n) (with minor overhead)** | **Variable (~1.04 - 1.1429)** | ✅ Needs Padding | **General text compression** |
+
+---
+## 🎯 **Use Cases**
+- **📜 Log File Compression:** Reduces storage space while maintaining quick retrieval.
+- **⚡ High-Speed Data Transmission:** Faster processing with `enforced8CharInput=true`.
+- **📈 Fixed Compression Ratio Scenarios:** Ideal for predictable compression requirements.
+- **📁 Data Archiving:** Efficient text storage without losing information.
+- **⏳ Real-Time Compression:** `enforced8CharInput=true` ensures immediate compression without extra calculations.
+
+---
+## 🚀 **Features**
+✅ **Fixed compression ratio** up to **1.1429** for `enforced8CharInput=true`.
+✅ **Supports alphabets, numbers, and symbols**.
+✅ **Optimized for real-time and high-speed data transmission**.
+
+---
+## 🛠️ **Functions**
+
+### 📌 `file_compression(filename, enforced8CharInput=false)`
+Compresses a text file and saves the compressed data with the `.rdc` extension.
+
+### 📌 `file_decompression(filename, enforced8CharInput=false)`
+Decompresses a previously compressed `.rdc` file back to its original form.
+
+### 📌 `compression(data, key="text", enforced8CharInput=false, bitLength=8)`
+Compresses a string using **7-bit storage**, returning a compressed string.
+
+### 📌 `decompression(compressedText, key="text", enforced8CharInput=false)`
+Decompresses a compressed string back to its original form.
+
+---
+## 📥 **Installation**
+
+Install via npm:
+
+```sh
+npm install ravdecjs
+```
+Install directly from GitHub
+```sh
+npm install mr-ravin/ravdecjs
+```
+
+---
+## 🗜️ **Example Usage**
+
+### ✍ **Compressing and Decompressing Text**
+```javascript
+const { compression, decompression } = require('ravdecjs');
+
+// When enforced8CharInput=true
+
+const text1 = "Ravdec !"; // Length of data is divisible by 8
+const compressed1 = compression(text1, "text", true);
+const decompressed1 = decompression(compressed1, "text", true);
+
+console.log("Compressed:", compressed1);
+console.log("Decompressed:", decompressed1);
+console.log("Success:", text1 === decompressed1);
+
+// When enforced8CharInput=false (minimum 24 characters required)
+
+const text2 = "R".repeat(25);
+const compressed2 = compression(text2);
+const decompressed2 = decompression(compressed2);
+
+console.log("Compressed:", compressed2);
+console.log("Decompressed:", decompressed2);
+console.log("Success:", text2 === decompressed2);
+```
+
+### 📂 **Compressing and Decompressing Files**
+```javascript
+const { file_compression, file_decompression } = require('ravdecjs');
+
+const originalFile = "inputfile.txt";
+
+// Compress a file
+file_compression(originalFile);
+
+// Decompress the previously compressed file
+file_decompression(originalFile + ".rdc");
+```
+
+---
+## 📜 **Copyright License**
 ```python
-Copyright (c) 2016-2021 Ravin Kumar
+Copyright (c) 2016 Ravin Kumar
 Website: https://mr-ravin.github.io
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation 
