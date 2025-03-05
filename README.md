@@ -85,7 +85,7 @@ Install via npm:
 ```sh
 npm install ravdecjs
 ```
-Install directly from GitHub
+Install directly from GitHub:
 ```sh
 npm install git+https://github.com/mr-ravin/ravdecjs.git
 ```
