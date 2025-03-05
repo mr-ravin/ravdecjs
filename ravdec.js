@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const version = '1.1.1';
+const version = '1.1.2';
 
 function checkCompressibility(asciiValue, char) {
     if (asciiValue > 127) {
